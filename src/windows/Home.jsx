@@ -8,11 +8,11 @@ import Blog from "../components/Blog";
 const Home = () => {
   return (
     <main className="">
-      <Hero />
-      <Partners />
+      {/* <Hero /> */}
+      {/* <Partners /> */}
       <Contents />
-      <Partnership />
-      <Blog />
+      {/* <Partnership /> */}
+      {/* <Blog /> */}
     </main>
   );
 };

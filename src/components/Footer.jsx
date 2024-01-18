@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-primary text-white mt-10 md:px-20 px-5 py-10">
       <div className="flex md:flex-row flex-col items-center md:items-start gap-5 md:gap-0 md:justify-between border-b-white border-b-2 pb-5">
         <div className="cursor-pointer">
-          <Link to="contact">
+          <Link to="/">
             <svg
               width="164"
               height="46"

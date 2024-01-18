@@ -5,10 +5,10 @@ const Contents = () => {
   return (
     <section className="md:px-20 px-5 mb-10">
       <div className="flex flex-col md:flex-row md:justify-between mb-24 mt-10">
-        <h2 className="w-[401px] text-4xl mb-10 md:mb-0">
+        <h2 className="w-[350px] text-4xl mb-10 md:mb-0">
           We foster, assist, and expand technological innovations.
         </h2>
-        <p className="md:w-[450px] lg:w-[522px] text-lg">
+        <p className="w-[350px] md:w-[450px] lg:w-[522px] text-lg">
           We offer optimal solutions and a supportive ecosystem to materialize
           your innovative concepts, utilizing advanced technological tools.
         </p>
