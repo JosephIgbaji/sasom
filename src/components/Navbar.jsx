@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "./Button";
 
 const Navbar = () => {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
   return (
     <header>
       <nav className="flex justify-between py-5 px-5 md:px-20 bg-white">
@@ -79,8 +81,49 @@ const Navbar = () => {
             <Button title="Contact Us" />
           </Link>
         </div>
+        {showMobileNav && (
+          <div className="md:hidden bg-primary absolute right-2 top-16 flex flex-col gap-2 items-center">
+            <ul className="flex flex-col p-4 justify-between text-lg font-semibold gap-5 lg:gap-20">
+              <Link to="about">
+                <li
+                  onClick={() => setShowMobileNav(!showMobileNav)}
+                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                >
+                  About
+                </li>
+              </Link>
+              <li
+                onClick={() => setShowMobileNav(!showMobileNav)}
+                className="hover:text-white transition ease-in hover:cursor-pointer"
+              >
+                Academy
+              </li>
+              <li
+                onClick={() => setShowMobileNav(!showMobileNav)}
+                className="hover:text-white transition ease-in hover:cursor-pointer"
+              >
+                Co-work Space
+              </li>
+              <li
+                onClick={() => setShowMobileNav(!showMobileNav)}
+                className="hover:text-white transition ease-in hover:cursor-pointer"
+              >
+                Blog
+              </li>
+              <Link to="contact">
+                <li
+                  onClick={() => setShowMobileNav(!showMobileNav)}
+                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                >
+                  Contact
+                </li>
+              </Link>
+            </ul>
+          </div>
+        )}
         <div className="md:hidden">
           <svg
+            onClick={() => setShowMobileNav(!showMobileNav)}
             className="cursor-pointer"
             width="32"
             height="30"

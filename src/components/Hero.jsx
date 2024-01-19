@@ -20,7 +20,7 @@ const Hero = () => {
           <ButtonOutline title="Learn More" />
         </div>
       </section>
-      <section className="md:w-[654px] md:h-[586.99px]">
+      <section className="md:w-[654px] md:h-[586.99px] flex items-center">
         <img src={HeroImage} alt="lady with a laptop" />
       </section>
     </header>

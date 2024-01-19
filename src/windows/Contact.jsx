@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const Contact = () => {
   return (
-    <div className="bg-white mx-auto rounded-3xl border p-10 w-[350px] md:w-[670px]">
+    <div className="bg-white mx-auto rounded-3xl border p-5 md:p-10 w-[330px] md:w-[670px]">
       <div className="cursor-pointer mb-10">
         <svg
           width="164"
