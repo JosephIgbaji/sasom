@@ -5,7 +5,7 @@ import HeroImage from "../assets/lady-with-laptop.png";
 
 const Hero = () => {
   return (
-    <header className="md:h-[600px] bg-primary w-full px-5 py-10 md:px-20 bg-opacity-40 flex md:justify-between flex-col-reverse md:flex-row items-center">
+    <header className="md:h-[600px] bg-primary w-full px-5 md:py-10 md:px-20 bg-opacity-40 flex md:justify-between flex-col md:flex-row items-center gap-10">
       <section className="mt-10 md:mt-0">
         <h1 className="text-4xl font-bold text-black mb-5">
           Fostering Innovations, <br />
