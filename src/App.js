@@ -11,10 +11,6 @@ function App() {
   return (
     <div className="mx-auto w-full">
       <Navbar />
-
-      {/* <Home />
-      <Contact />
-      <About /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

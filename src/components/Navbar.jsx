@@ -67,9 +67,11 @@ const Navbar = () => {
                 About
               </li>
             </Link>
-            <li className="hover:text-primary transition ease-in hover:cursor-pointer">
-              Academy
-            </li>
+            <a href="https://academy-sasom.vercel.app" target="_black">
+              <li className="hover:text-primary transition ease-in hover:cursor-pointer">
+                Academy
+              </li>
+            </a>
             <li className="hover:text-primary transition ease-in hover:cursor-pointer">
               Co-work Space
             </li>
@@ -92,12 +94,14 @@ const Navbar = () => {
                   About
                 </li>
               </Link>
-              <li
-                onClick={() => setShowMobileNav(!showMobileNav)}
-                className="hover:text-white transition ease-in hover:cursor-pointer"
-              >
-                Academy
-              </li>
+              <a href="https://academy-sasom.vercel.app" target="_black">
+                <li
+                  onClick={() => setShowMobileNav(!showMobileNav)}
+                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                >
+                  Academy
+                </li>
+              </a>
               <li
                 onClick={() => setShowMobileNav(!showMobileNav)}
                 className="hover:text-white transition ease-in hover:cursor-pointer"

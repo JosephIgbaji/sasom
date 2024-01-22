@@ -8,7 +8,7 @@ const Contents = () => {
         <h2 className="w-[330px] md:w-[450px] lg:w-[522px] text-3xl md:text-4xl mb-10 md:mb-0">
           We foster, assist, and expand technological innovations.
         </h2>
-        <p className="w-[330px] md:w-[450px] lg:w-[522px] text-lg">
+        <p className="w-[330px] md:w-[450px] lg:w-[522px] md:text-lg">
           We offer optimal solutions and a supportive ecosystem to materialize
           your innovative concepts, utilizing advanced technological tools.
         </p>
