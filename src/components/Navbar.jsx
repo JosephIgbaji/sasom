@@ -5,7 +5,11 @@ import Button from "./Button";
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [currentUrl, setCurrentUrl] = useState(window.location.pathname);
+  const linkStyle = "transition ease-in cursor-pointer hover:text-primary";
+  const activeStyle = linkStyle + " text-primary";
 
+  //className={currentRoute === "/" ? activeStyle : linkStyle}
   return (
     <header>
       <nav className="flex justify-between py-5 px-5 md:px-20 bg-white">
@@ -60,64 +64,243 @@ const Navbar = () => {
             </svg>
           </Link>
         </div>
-        <div className="hidden md:flex gap-10 items-center">
-          <ul className="flex justify-between md:gap-5 lg:gap-20">
+        <div className="hidden lg:flex gap-10 items-center">
+          <ul className="flex justify-between lg:gap-20">
+            <Link to="/">
+              <li
+                onClick={() => setCurrentUrl("/")}
+                className={currentUrl === "/" ? activeStyle : linkStyle}
+              >
+                Home
+              </li>
+            </Link>
             <Link to="about">
-              <li className="hover:text-primary transition ease-in hover:cursor-pointer">
+              <li
+                onClick={() => setCurrentUrl("/about")}
+                className={currentUrl === "/about" ? activeStyle : linkStyle}
+              >
                 About
               </li>
             </Link>
-            <a href="https://academy-sasom.vercel.app" target="_black">
-              <li className="hover:text-primary transition ease-in hover:cursor-pointer">
-                Academy
+            <div className="relative group">
+              <li
+                className={currentUrl === "/services" ? activeStyle : linkStyle}
+              >
+                Services
               </li>
-            </a>
-            <li className="hover:text-primary transition ease-in hover:cursor-pointer">
-              Co-work Space
-            </li>
-            <li className="hover:text-primary transition ease-in hover:cursor-pointer">
-              Blog
-            </li>
+
+              <div className="absolute hidden group-hover:flex flex-col gap-5 bg-white p-4 left-0 w-[200px]">
+                <a href="https://academy-sasom.vercel.app" target="_black">
+                  <li className="hover:text-primary transition ease-in hover:cursor-pointer">
+                    Academy
+                  </li>
+                </a>
+                <Link to="/working-space">
+                  <li
+                    onClick={() => setCurrentUrl("/services")}
+                    className={
+                      currentUrl === "/services" ? activeStyle : linkStyle
+                    }
+                  >
+                    Co-work Space
+                  </li>
+                </Link>
+                <Link to="">
+                  <li
+                    onClick={() => {
+                      setShowMobileNav(!showMobileNav);
+                      setCurrentUrl("/services");
+                    }}
+                    className={
+                      currentUrl === "/services" ? activeStyle : linkStyle
+                    }
+                  >
+                    Cloud Service
+                  </li>
+                </Link>
+                <Link to="">
+                  <li
+                    onClick={() => {
+                      setShowMobileNav(!showMobileNav);
+                      setCurrentUrl("/services");
+                    }}
+                    className={
+                      currentUrl === "/services" ? activeStyle : linkStyle
+                    }
+                  >
+                    Mobile and Web Development
+                  </li>
+                </Link>
+                <Link to="">
+                  <li
+                    onClick={() => {
+                      setShowMobileNav(!showMobileNav);
+                      setCurrentUrl("/services");
+                    }}
+                    className={
+                      currentUrl === "/services" ? activeStyle : linkStyle
+                    }
+                  >
+                    infrastructure
+                  </li>
+                </Link>
+                <Link to="">
+                  <li
+                    onClick={() => {
+                      setShowMobileNav(!showMobileNav);
+                      setCurrentUrl("/services");
+                    }}
+                    className={
+                      currentUrl === "/services" ? activeStyle : linkStyle
+                    }
+                  >
+                    IT Consultation
+                  </li>
+                </Link>
+              </div>
+            </div>
+            <Link to="/blog">
+              <li
+                onClick={() => setCurrentUrl("/blog")}
+                className={currentUrl === "/blog" ? activeStyle : linkStyle}
+              >
+                Blog
+              </li>
+            </Link>
           </ul>
           <Link to="contact">
             <Button title="Contact Us" />
           </Link>
         </div>
         {showMobileNav && (
-          <div className="md:hidden bg-primary absolute right-2 top-16 flex flex-col gap-2 items-center">
+          <div className="lg:hidden w-full bg-white px-5 md:px-20 absolute left-0 top-16 flex flex-col gap-2">
             <ul className="flex flex-col p-4 justify-between text-lg font-semibold gap-5 lg:gap-20">
+              <Link to="/">
+                <li
+                  onClick={() => {
+                    setCurrentUrl("/");
+                    setShowMobileNav(!showMobileNav);
+                  }}
+                  className={currentUrl === "/" ? activeStyle : linkStyle}
+                >
+                  Home
+                </li>
+              </Link>
               <Link to="about">
                 <li
-                  onClick={() => setShowMobileNav(!showMobileNav)}
-                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                  onClick={() => {
+                    setShowMobileNav(!showMobileNav);
+                    setCurrentUrl("/about");
+                  }}
+                  className={currentUrl === "/about" ? activeStyle : linkStyle}
                 >
                   About
                 </li>
               </Link>
-              <a href="https://academy-sasom.vercel.app" target="_black">
+              <div className="relative group">
                 <li
-                  onClick={() => setShowMobileNav(!showMobileNav)}
-                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                  className={
+                    currentUrl === "/services" ? activeStyle : linkStyle
+                  }
                 >
-                  Academy
+                  Services
                 </li>
-              </a>
-              <li
-                onClick={() => setShowMobileNav(!showMobileNav)}
-                className="hover:text-white transition ease-in hover:cursor-pointer"
-              >
-                Co-work Space
-              </li>
-              <li
-                onClick={() => setShowMobileNav(!showMobileNav)}
-                className="hover:text-white transition ease-in hover:cursor-pointer"
-              >
-                Blog
-              </li>
+
+                <div className="absolute bg-primary font-normal text-lg bg-opacity-50 hidden group-hover:flex flex-col gap-5 p-4 left-16 -top-28 w-[200px]">
+                  <a href="https://academy-sasom.vercel.app" target="_black">
+                    <li className="hover:text-primary transition ease-in hover:cursor-pointer">
+                      Academy
+                    </li>
+                  </a>
+                  <Link to="/working-space">
+                    <li
+                      onClick={() => {
+                        setShowMobileNav(!showMobileNav);
+                        setCurrentUrl("/services");
+                      }}
+                      className={
+                        currentUrl === "/services" ? activeStyle : linkStyle
+                      }
+                    >
+                      Co-work Space
+                    </li>
+                  </Link>
+                  <Link to="">
+                    <li
+                      onClick={() => {
+                        setShowMobileNav(!showMobileNav);
+                        setCurrentUrl("/services");
+                      }}
+                      className={
+                        currentUrl === "/services" ? activeStyle : linkStyle
+                      }
+                    >
+                      Cloud Services
+                    </li>
+                  </Link>
+                  <Link to="">
+                    <li
+                      onClick={() => {
+                        setShowMobileNav(!showMobileNav);
+                        setCurrentUrl("/services");
+                      }}
+                      className={
+                        currentUrl === "/services" ? activeStyle : linkStyle
+                      }
+                    >
+                      Mobile and Web Development
+                    </li>
+                  </Link>
+                  <Link to="">
+                    <li
+                      onClick={() => {
+                        setShowMobileNav(!showMobileNav);
+                        setCurrentUrl("/services");
+                      }}
+                      className={
+                        currentUrl === "/services" ? activeStyle : linkStyle
+                      }
+                    >
+                      infrastructure
+                    </li>
+                  </Link>
+                  <Link to="">
+                    <li
+                      onClick={() => {
+                        setShowMobileNav(!showMobileNav);
+                        setCurrentUrl("/services");
+                      }}
+                      className={
+                        currentUrl === "/services" ? activeStyle : linkStyle
+                      }
+                    >
+                      IT Consultation
+                    </li>
+                  </Link>
+                </div>
+              </div>
+              <Link to="/blog">
+                <li
+                  onClick={() => {
+                    setShowMobileNav(!showMobileNav);
+
+                    setCurrentUrl("/blog");
+                  }}
+                  className={currentUrl === "/blog" ? activeStyle : linkStyle}
+                >
+                  Blog
+                </li>
+              </Link>
               <Link to="contact">
                 <li
-                  onClick={() => setShowMobileNav(!showMobileNav)}
-                  className="hover:text-white transition ease-in hover:cursor-pointer"
+                  onClick={() => {
+                    setShowMobileNav(!showMobileNav);
+
+                    setCurrentUrl("/contact");
+                  }}
+                  className={
+                    currentUrl === "/contact" ? activeStyle : linkStyle
+                  }
                 >
                   Contact
                 </li>
@@ -125,7 +308,7 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <svg
             onClick={() => setShowMobileNav(!showMobileNav)}
             className="cursor-pointer"
