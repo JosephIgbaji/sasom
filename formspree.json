@@ -1,0 +1,9 @@
+{
+    "forms": {
+      "contactForm": {
+        "name": "Contact Form",
+        "actions": [{ "type": "email", "to": "zeusbenson3@gmail.com" }],
+        "fields": {"email": {"required": "true", "type": "email"}}
+      }
+    }
+  }

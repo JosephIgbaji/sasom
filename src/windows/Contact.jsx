@@ -99,6 +99,9 @@ const Contact = () => {
                 type="text"
                 placeholder="Enter Your message here"
               />
+              <p className="text-black text-sm mt-2 text-opacity-50">
+                Call or whatsapp +234 903 922 7583
+              </p>
             </div>
           </div>
           <div className="text-right">
