@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Partnership = () => {
   return (
@@ -12,7 +13,9 @@ const Partnership = () => {
           We are deeply committed to assisting startups that aim to address
           social challenges in Africa.
         </p>
-        <Button title="Partner with us" />
+        <Link to="contact">
+          <Button title="Partner with us" />
+        </Link>
       </div>
     </div>
   );

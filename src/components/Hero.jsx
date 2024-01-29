@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import ButtonOutline from "./ButtonOutline";
 import HeroImage from "../assets/lady-with-laptop.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,7 +17,9 @@ const Hero = () => {
           entrepreneurship and boosts economic development.
         </p>
         <div className="mt-5 flex gap-5">
-          <Button title="Book a consultation" />
+          <Link to="contact">
+            <Button title="Book a consultation" />
+          </Link>
           <ButtonOutline title="Learn More" />
         </div>
       </section>
