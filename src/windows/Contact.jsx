@@ -79,7 +79,7 @@ const Contact = () => {
               <select className="rounded-lg p-4 border w-[280px] h-14 bg-white">
                 <option value="Option A">Enquiry</option>
                 <option value="Option B">Partnership</option>
-                <option value="Option C">Consultaion</option>
+                <option value="Option C">Consultation</option>
               </select>
             </div>
             <div className="flex flex-col">
