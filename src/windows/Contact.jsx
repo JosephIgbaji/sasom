@@ -1,7 +1,69 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+
+import emailjs from "@emailjs/browser";
+
 import Button from "../components/Button";
+import Alert from "../components/Alert";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [purpose, setPurpose] = useState("");
+  const [buttonLoading, setButtonLoading] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   console.log(purpose);
+  //   const response = await fetch("https://formspree.io/f/xqkrergr", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ name, email, phone, message }),
+  //   });
+
+  //   if (response.ok) {
+  //     alert("Form Submitted");
+  //   } else {
+  //     alert("Failed to submit form");
+  //   }
+  // };
+
+  const form = useRef();
+
+  const closeAlert = () => {
+    setAlertMessage("");
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ymv8znp",
+        "template_tpe2i7c",
+        form.current,
+        "sx-B_Oqubt4iNYJXV"
+      )
+      .then(
+        (result) => {
+          setAlertMessage(result.text);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+          setPurpose("");
+          window.location.href = "/";
+        },
+        (error) => {
+          setAlertMessage(error.text);
+        }
+      );
+  };
+
   return (
     <div className="bg-white mx-auto rounded-3xl border p-5 md:p-10 w-[330px] md:w-[670px]">
       <div className="cursor-pointer mb-10">
@@ -54,21 +116,27 @@ const Contact = () => {
         </svg>
       </div>
       <div>
-        <form action="">
+        <form ref={form} onSubmit={handleFormSubmit}>
           <div className="flex md:justify-between flex-col md:flex-row mb-10">
             <div className="flex flex-col mb-10 md:mb-0">
               <label className="mb-3">Name</label>
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="rounded-lg p-4 border w-[280px] h-14"
                 type="text"
+                name="user_name"
                 placeholder="Enter your full name"
               />
             </div>
             <div className="flex flex-col">
               <label className="mb-3">Email</label>
               <input
+                value={email}
+                name="user_email"
+                onChange={(e) => setEmail(e.target.value)}
                 className="rounded-lg p-4 border w-[280px] h-14"
-                type="text"
+                type="email"
                 placeholder="Enter email address"
               />
             </div>
@@ -76,15 +144,26 @@ const Contact = () => {
           <div className="flex md:justify-between flex-col md:flex-row mb-10">
             <div className="flex flex-col mb-10 md:mb-0">
               <label className="mb-3">Purpose</label>
-              <select className="rounded-lg p-4 border w-[280px] h-14 bg-white">
-                <option value="Option A">Enquiry</option>
-                <option value="Option B">Partnership</option>
-                <option value="Option C">Consultation</option>
+              <select
+                name="purpose"
+                value={purpose}
+                onChange={(e) => setPurpose(e.target.value)}
+                className="rounded-lg p-4 border w-[280px] h-14 bg-white"
+              >
+                <option defaultValue="" disabled="">
+                  Select
+                </option>
+                <option value="enquiry">Enquiry</option>
+                <option value="partnership">Partnership</option>
+                <option value="consultation">Consultation</option>
               </select>
             </div>
             <div className="flex flex-col">
               <label className="mb-3">Phone Number</label>
               <input
+                value={phone}
+                name="contact_number"
+                onChange={(e) => setPhone(e.target.value)}
                 className="rounded-lg p-4 border w-[280px] h-14"
                 type="text"
                 placeholder="Enter phone number"
@@ -95,6 +174,9 @@ const Contact = () => {
             <div className="flex flex-col">
               <label className="mb-3">Message</label>
               <textarea
+                value={message}
+                name="message"
+                onChange={(e) => setMessage(e.target.value)}
                 className="rounded-lg p-4 border h-24"
                 type="text"
                 placeholder="Enter Your message here"
@@ -105,9 +187,15 @@ const Contact = () => {
             </div>
           </div>
           <div className="text-right">
+            {/* <input type="submit" value="Submit" /> */}
             <Button title="Send Message" />
           </div>
         </form>
+        {alertMessage && (
+          <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+            <Alert message={alertMessage} onClick={closeAlert} />
+          </div>
+        )}
       </div>
     </div>
   );
