@@ -11,7 +11,7 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [purpose, setPurpose] = useState("");
-  const [buttonLoading, setButtonLoading] = useState(false);
+  // const [buttonLoading, setButtonLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
 
   // const handleSubmit = async (e) => {
