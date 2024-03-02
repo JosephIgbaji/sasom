@@ -1,6 +1,7 @@
 import React from "react";
 import BlogContent from "./BlogContent";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Blogs = ({ onBlogPage, BlogTitle }) => {
   return (
@@ -12,7 +13,12 @@ const Blogs = ({ onBlogPage, BlogTitle }) => {
           <BlogContent />
           <BlogContent />
         </div>
-        {!onBlogPage && <Button title="Visit our blog" />}
+        {!onBlogPage && (
+          <Link to={"/blogs"}>
+            {" "}
+            <Button title="Visit our blog" />
+          </Link>
+        )}
       </div>
     </div>
   );
