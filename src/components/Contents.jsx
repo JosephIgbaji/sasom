@@ -15,6 +15,7 @@ const Contents = () => {
       </div>
       <div className=" flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         <ContentCard
+          link="/"
           icon={
             <svg
               width="33"
@@ -39,6 +40,7 @@ const Contents = () => {
         />
 
         <ContentCard
+          link="/"
           icon={
             <svg
               width="33"
@@ -63,6 +65,7 @@ const Contents = () => {
         />
 
         <ContentCard
+          link="/"
           icon={
             <svg
               width="33"
@@ -92,6 +95,7 @@ const Contents = () => {
         />
 
         <ContentCard
+          link="/"
           icon={
             <svg
               width="33"

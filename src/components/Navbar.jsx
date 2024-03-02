@@ -7,14 +7,16 @@ const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(window.location.pathname);
   const linkStyle = "transition ease-in cursor-pointer hover:text-primary";
+  const mobileLinkStyle =
+    "transition ease-in cursor-pointer hover:text-primary text-black";
   const activeStyle = linkStyle + " text-primary";
 
   //className={currentRoute === "/" ? activeStyle : linkStyle}
   return (
     <header>
-      <nav className="flex justify-between py-5 px-5 md:px-20 bg-white">
+      <nav className="fixed z-50 w-full flex justify-between py-5 px-5 md:px-20 bg-white">
         <div className="cursor-pointer">
-          <Link to="/">
+          <Link onClick={() => setCurrentUrl("/")} to="/">
             <svg
               width="164"
               height="46"
@@ -90,16 +92,18 @@ const Navbar = () => {
               </li>
 
               <div className="absolute hidden group-hover:flex flex-col gap-5 bg-white p-4 left-0 w-[200px]">
-                <a href="https://academy-sasom.vercel.app" target="_black">
+                <a href="https://academy.sasomit.com" target="_black">
                   <li className="hover:text-primary transition ease-in hover:cursor-pointer">
                     Academy
                   </li>
                 </a>
-                <Link to="/working-space">
+                <Link to="/co-working-space">
                   <li
-                    onClick={() => setCurrentUrl("/services")}
+                    onClick={() => setCurrentUrl("/co-working-space")}
                     className={
-                      currentUrl === "/services" ? activeStyle : linkStyle
+                      currentUrl === "/co-working-space"
+                        ? activeStyle
+                        : linkStyle
                     }
                   >
                     Co-work Space
@@ -159,10 +163,10 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <Link to="/blog">
+            <Link to="/blogs">
               <li
-                onClick={() => setCurrentUrl("/blog")}
-                className={currentUrl === "/blog" ? activeStyle : linkStyle}
+                onClick={() => setCurrentUrl("/blogs")}
+                className={currentUrl === "/blogs" ? activeStyle : linkStyle}
               >
                 Blog
               </li>
@@ -206,13 +210,13 @@ const Navbar = () => {
                   Services
                 </li>
 
-                <div className="absolute bg-primary font-normal text-lg bg-opacity-50 hidden group-hover:flex flex-col gap-5 p-4 left-16 -top-28 w-[200px]">
-                  <a href="https://academy-sasom.vercel.app" target="_black">
+                <div className="absolute bg-primary font-normal text-lg bg-opacity-20 hidden group-hover:flex flex-col gap-5 p-4 left-16 -top-28 w-[200px]">
+                  <a href="https://academy.sasomit.com" target="_black">
                     <li className="hover:text-primary transition ease-in hover:cursor-pointer">
                       Academy
                     </li>
                   </a>
-                  <Link to="/working-space">
+                  <Link to="/co-working-space">
                     <li
                       onClick={() => {
                         setShowMobileNav(!showMobileNav);
@@ -279,14 +283,14 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="/blog">
+              <Link to="/blogs">
                 <li
                   onClick={() => {
                     setShowMobileNav(!showMobileNav);
 
-                    setCurrentUrl("/blog");
+                    setCurrentUrl("/blogs");
                   }}
-                  className={currentUrl === "/blog" ? activeStyle : linkStyle}
+                  className={currentUrl === "/blogs" ? activeStyle : linkStyle}
                 >
                   Blog
                 </li>

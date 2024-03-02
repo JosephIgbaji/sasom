@@ -4,7 +4,7 @@ import AboutContent from "../components/AboutContent";
 
 const About = () => {
   return (
-    <div>
+    <div className="pt-28">
       <AboutHero />
       <AboutContent />
     </div>

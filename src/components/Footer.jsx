@@ -195,7 +195,7 @@ const Footer = () => {
               Ilori close, off Apata street, Okeira,
               <br /> Lagos State.
             </p>
-            <p>enquiry@sasom.com</p>
+            <a href="mailto:enquiry@sasomit.com">enquiry@sasomit.com</a>
           </div>
         </div>
       </div>
