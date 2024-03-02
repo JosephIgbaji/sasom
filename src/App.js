@@ -8,6 +8,7 @@ import Contact from "./windows/Contact";
 import About from "./windows/About";
 import WorkingSpace from "./windows/WorkingSpace";
 import Blog from "./windows/blog";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="co-working-space" element={<WorkingSpace />} />
         <Route path="blogs" element={<Blog />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
