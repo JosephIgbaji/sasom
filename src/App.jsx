@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 import Contact from "./windows/Contact";
 import About from "./windows/About";
 import WorkingSpace from "./windows/WorkingSpace";
-import Blog from "./windows/blog";
 import NotFound from "./components/NotFound";
+import Blog from "./windows/blog/index";
 
 function App() {
   return (
