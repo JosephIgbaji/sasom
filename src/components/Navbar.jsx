@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import Button from "./Button";
 
@@ -12,10 +13,27 @@ const Navbar = () => {
   const activeStyle = linkStyle + " text-primary";
 
   //className={currentRoute === "/" ? activeStyle : linkStyle}
+
   return (
-    <header>
+    <motion.header
+    // initial={{ opacity: 0 }}
+    // initial={{ x: -300 }}
+    // animate={{ x: 0 }}
+    // transition={{ ease: "easeIn", duration: 2 }}
+
+    // animate={{ opacity: 1 }}
+    // transition={{
+    //   opacity: { ease: "linear" },
+    //   layout: { duration: 0.3 },
+    // }}
+    >
       <nav className="fixed z-50 w-full flex justify-between py-5 px-5 md:px-20 bg-white">
-        <div className="cursor-pointer">
+        <motion.div
+          initial={{ x: 300 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeIn", duration: 1.5 }}
+          className="cursor-pointer"
+        >
           <Link onClick={() => setCurrentUrl("/")} to="/">
             <svg
               width="164"
@@ -65,8 +83,13 @@ const Navbar = () => {
               </defs>
             </svg>
           </Link>
-        </div>
-        <div className="hidden lg:flex gap-10 items-center">
+        </motion.div>
+        <motion.div
+          initial={{ x: -300 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeIn", duration: 1.5 }}
+          className="hidden lg:flex gap-10 items-center"
+        >
           <ul className="flex justify-between lg:gap-20">
             <Link to="/">
               <li
@@ -175,7 +198,7 @@ const Navbar = () => {
           <Link to="contact">
             <Button title="Contact Us" />
           </Link>
-        </div>
+        </motion.div>
         {showMobileNav && (
           <div className="lg:hidden w-full bg-white px-5 md:px-20 absolute left-0 top-16 flex flex-col gap-2">
             <ul className="flex flex-col p-4 justify-between text-lg font-semibold gap-5 lg:gap-20">
@@ -329,7 +352,7 @@ const Navbar = () => {
           </svg>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
