@@ -35,8 +35,8 @@ const Contents = () => {
               />
             </svg>
           }
-          title="Sasom Academy"
-          description="Unleash Your Business Potential with Strategic IT Consulting. We align technology with your goals, optimizing infrastructure, enhancing efficiency, and driving innovation"
+          title="Managed IT Service"
+          description="Seamless operations and proactive support with our Managed IT Services. Say goodbye to downtime and hello to optimized performance."
         />
 
         <ContentCard
@@ -60,8 +60,8 @@ const Contents = () => {
               />
             </svg>
           }
-          title="Co-working space"
-          description="Unleash Your Business Potential with Strategic IT Consulting. We align technology with your goals, optimizing infrastructure, enhancing efficiency, and driving innovation"
+          title="Cloud Computing Service"
+          description="Embrace the power of Cloud for scalability, flexibility, and cost-efficiency. our end-to-end solutions include migration, deployment and management."
         />
 
         <ContentCard
@@ -91,7 +91,7 @@ const Contents = () => {
             </svg>
           }
           title="Web and Mobile App Development"
-          description="Unleash Your Business Potential with Strategic IT Consulting. We align technology with your goals, optimizing infrastructure, enhancing efficiency, and driving innovation"
+          description="Innovative web and mobile applications tailored to your needs. Enhance user experience and expand your digital presence with our development expertise."
         />
 
         <ContentCard
@@ -124,8 +124,74 @@ const Contents = () => {
               />
             </svg>
           }
+          title="Network Implementation"
+          description="Build a robust network infrastructure tailored to your business requirements. Our expert team ensures a secure and efficient network environment."
+        />
+        <ContentCard
+          link="/"
+          icon={
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M12.1875 2.70837C8.63962 2.70837 5.75525 5.59275 5.75525 9.14067C5.75525 12.6209 8.47712 15.4375 12.025 15.5594C12.1334 15.5459 12.2417 15.5459 12.323 15.5594C12.35 15.5594 12.3636 15.5594 12.3907 15.5594C12.4042 15.5594 12.4042 15.5594 12.4177 15.5594C15.8844 15.4375 18.6063 12.6209 18.6198 9.14067C18.6198 5.59275 15.7355 2.70837 12.1875 2.70837Z"
+                fill="#317EDE"
+              />
+              <path
+                d="M19.0667 19.1614C15.2885 16.6427 9.12709 16.6427 5.32188 19.1614C3.60209 20.3124 2.65417 21.8697 2.65417 23.5354C2.65417 25.201 3.60209 26.7447 5.30834 27.8822C7.20417 29.1552 9.69584 29.7916 12.1875 29.7916C14.6792 29.7916 17.1708 29.1552 19.0667 27.8822C20.7729 26.7312 21.7208 25.1874 21.7208 23.5083C21.7073 21.8427 20.7729 20.2989 19.0667 19.1614Z"
+                fill="#317EDE"
+              />
+              <path
+                opacity="0.4"
+                d="M27.0698 9.93964C27.2865 12.5667 25.4177 14.8688 22.8313 15.1803C22.8177 15.1803 22.8177 15.1803 22.8042 15.1803H22.7636C22.6823 15.1803 22.6011 15.1803 22.5333 15.2073C21.2198 15.2751 20.0146 14.8553 19.1073 14.0834C20.5021 12.8376 21.3011 10.9688 21.1386 8.93755C21.0438 7.84068 20.6646 6.8386 20.0958 5.98547C20.6104 5.72818 21.2063 5.56568 21.8156 5.51151C24.4698 5.2813 26.8396 7.25839 27.0698 9.93964Z"
+                fill="#317EDE"
+              />
+              <path
+                d="M29.7782 22.4656C29.6698 23.7791 28.8302 24.9166 27.4219 25.6885C26.0677 26.4333 24.3615 26.7854 22.6688 26.7448C23.6438 25.8645 24.2125 24.7677 24.3209 23.6031C24.4563 21.9239 23.6573 20.3125 22.0594 19.026C21.1521 18.3083 20.0959 17.7396 18.9448 17.3198C21.9375 16.4531 25.7021 17.0354 28.0177 18.9041C29.2636 19.9062 29.9 21.1656 29.7782 22.4656Z"
+                fill="#317EDE"
+              />
+            </svg>
+          }
+          title=" IT Consulting and Strategy"
+          description="Strategic insight and expert guidance to align Technology with your goals, optimizing infrastructure, enhancing efficiency, and driving innovation."
+        />
+        <ContentCard
+          link="/"
+          icon={
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M12.1875 2.70837C8.63962 2.70837 5.75525 5.59275 5.75525 9.14067C5.75525 12.6209 8.47712 15.4375 12.025 15.5594C12.1334 15.5459 12.2417 15.5459 12.323 15.5594C12.35 15.5594 12.3636 15.5594 12.3907 15.5594C12.4042 15.5594 12.4042 15.5594 12.4177 15.5594C15.8844 15.4375 18.6063 12.6209 18.6198 9.14067C18.6198 5.59275 15.7355 2.70837 12.1875 2.70837Z"
+                fill="#317EDE"
+              />
+              <path
+                d="M19.0667 19.1614C15.2885 16.6427 9.12709 16.6427 5.32188 19.1614C3.60209 20.3124 2.65417 21.8697 2.65417 23.5354C2.65417 25.201 3.60209 26.7447 5.30834 27.8822C7.20417 29.1552 9.69584 29.7916 12.1875 29.7916C14.6792 29.7916 17.1708 29.1552 19.0667 27.8822C20.7729 26.7312 21.7208 25.1874 21.7208 23.5083C21.7073 21.8427 20.7729 20.2989 19.0667 19.1614Z"
+                fill="#317EDE"
+              />
+              <path
+                opacity="0.4"
+                d="M27.0698 9.93964C27.2865 12.5667 25.4177 14.8688 22.8313 15.1803C22.8177 15.1803 22.8177 15.1803 22.8042 15.1803H22.7636C22.6823 15.1803 22.6011 15.1803 22.5333 15.2073C21.2198 15.2751 20.0146 14.8553 19.1073 14.0834C20.5021 12.8376 21.3011 10.9688 21.1386 8.93755C21.0438 7.84068 20.6646 6.8386 20.0958 5.98547C20.6104 5.72818 21.2063 5.56568 21.8156 5.51151C24.4698 5.2813 26.8396 7.25839 27.0698 9.93964Z"
+                fill="#317EDE"
+              />
+              <path
+                d="M29.7782 22.4656C29.6698 23.7791 28.8302 24.9166 27.4219 25.6885C26.0677 26.4333 24.3615 26.7854 22.6688 26.7448C23.6438 25.8645 24.2125 24.7677 24.3209 23.6031C24.4563 21.9239 23.6573 20.3125 22.0594 19.026C21.1521 18.3083 20.0959 17.7396 18.9448 17.3198C21.9375 16.4531 25.7021 17.0354 28.0177 18.9041C29.2636 19.9062 29.9 21.1656 29.7782 22.4656Z"
+                fill="#317EDE"
+              />
+            </svg>
+          }
           title="Talent Out-sourcing"
-          description="Embrace scalable, flexible cloud computing. Our end-to-end solutions include migration, deployment, and management, empowering reliable, cost-effective infrastructure."
+          description="Unleash Your Business Potential with Strategic IT Consulting. We align technology with your goals, optimizing infrastructure, enhancing efficiency, and driving innovation."
         />
       </div>
     </section>

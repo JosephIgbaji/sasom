@@ -12,7 +12,7 @@ import Blog from "./windows/blog/index";
 
 function App() {
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-full cursor-[url]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

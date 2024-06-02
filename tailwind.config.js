@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      cursor: {
+        fancy: "url('/sasomit.png'), auto",
+      },
       backgroundImage: {
         gradient: "linear-gradient(90deg, #009EC5 16.05%, #EC3F75 100%)",
       },
